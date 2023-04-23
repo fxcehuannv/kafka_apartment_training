@@ -52,3 +52,5 @@ end
 Run consumer and producer
 # rails runner Kafka.new.producer
 # rails runner Kafka.new.consumer
+
+or using rails console
