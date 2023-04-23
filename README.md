@@ -4,14 +4,25 @@ gem 'apartment'
 gem 'ruby-kafka'
 
 # Apartment
-Apartment::Tenant.create('tenant_name')
-Apartment::Tenant.switch('tenant_name') do
-end
-Apartment::Tenant.switch!('tenant_name')
-Apartment::Tenant.current
+```
+  Create new tenant
+  Apartment::Tenant.create('tenant_name')
+```
+
+```
+  switch tenant
+  Apartment::Tenant.switch('tenant_name') do
+  end
+  Apartment::Tenant.switch!('tenant_name')
+```
+
+```
+  Get current tenant
+  Apartment::Tenant.current
+```
 
 # Kafka
-
+```
 class Partner < ApplicationRecord
   def consumer
     kafka = Kafka.new("broker.fxce-kafka-dev.vncdevs.com:31091")
@@ -48,9 +59,12 @@ class Partner < ApplicationRecord
   end
 
 end
+```
 
 Run consumer and producer
-# rails runner Kafka.new.producer
-# rails runner Kafka.new.consumer
-
-or using rails console
+```
+rails runner Kafka.new.producer
+rails runner Kafka.new.consumer
+or
+rails console
+```
