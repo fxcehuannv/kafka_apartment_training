@@ -9,7 +9,7 @@ class Partner < ApplicationRecord
   end
 
   def producer
-    kafka = Kafka.new("localhost:9092")
+    kafka = Kafka.new("broker.fxce-kafka-dev.vncdevs.com:31091")
     1000.times do |item|
       sleep 1
       kafka.deliver_message("Test Produce Message #{SecureRandom.hex}", topic: 'fxce-huan-nguyen')

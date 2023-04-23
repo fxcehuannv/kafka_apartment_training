@@ -61,10 +61,19 @@ class Partner < ApplicationRecord
 end
 ```
 
-Run consumer and producer
+# Run consumer and producer
 ```
 rails runner Kafka.new.producer
 rails runner Kafka.new.consumer
 or
 rails console
 ```
+
+# Start Kafka and ZooKeeper (start ZooKeeper first after start kafka)
+
+```
+cd kafka_2.13-3.4.0
+bin/zookeeper-server-start.sh config/zookeeper.properties to Start the ZooKeeper service
+bin/kafka-server-start.sh config/server.properties to Start the Kafka broker service
+```
+
