@@ -1,0 +1,4 @@
+<div className="field">
+ <%= form.label :author %>
+ <%= form.select :tenant_id, options_from_collection_for_select(@authors, 'id', 'name', article.tenant_id), include_blank: true %>
+</div>
