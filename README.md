@@ -77,3 +77,20 @@ bin/zookeeper-server-start.sh config/zookeeper.properties to Start the ZooKeeper
 bin/kafka-server-start.sh config/server.properties to Start the Kafka broker service
 ```
 
+# Set up
+```
+rake db:create
+```
+
+```
+rake create_tenants:import
+```
+
+```
+rake db:migrate
+```
+
+```
+rake migrate_partners:import
+```
+
