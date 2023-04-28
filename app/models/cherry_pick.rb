@@ -7,4 +7,8 @@ class CherryPick < ApplicationRecord
     puts "commit_3"
   end
 
+  def commit_4
+    puts "commit_4"
+  end
+
 end
