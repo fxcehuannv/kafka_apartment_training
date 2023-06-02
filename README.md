@@ -61,10 +61,10 @@ class Partner < ApplicationRecord
 end
 ```
 
-# Run consumer and producer
+# Run consumer and producer localhost
 ```
-rails runner Kafka.new.producer
-rails runner Kafka.new.consumer
+rails runner Partner.new.consumer_localhost
+rails runner Partner.new.producer_locahost
 or
 rails console
 ```
